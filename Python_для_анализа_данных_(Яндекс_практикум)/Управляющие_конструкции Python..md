@@ -486,10 +486,10 @@ print(top_levels, type(top_levels))
 players_by_level = [800, 600, 450, 338, 253, 190, 142, 107]
 first_level_players = players_by_level.pop(0) #Удалите данные о первом уровне
 
-print(players_by_level)
+print(players_by_level, type(layers_by_level))
 -
 
-[600, 450, 338, 253, 190, 142, 107]
+[600, 450, 338, 253, 190, 142, 107] <class 'list'>
 ```
 <br>
 
