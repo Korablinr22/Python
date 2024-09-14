@@ -738,7 +738,7 @@ print(rating_category)
 ```
 <br>
 
-## ---
+## еее
 <br>  
 
 ***Задание 1***  
