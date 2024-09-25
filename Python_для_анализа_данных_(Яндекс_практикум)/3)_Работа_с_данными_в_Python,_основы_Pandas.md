@@ -250,7 +250,7 @@ df = pd.DataFrame(data = col)
 print(df)
 -
 
-| product_id | product_name       | company_name     | price |
+| product_id | product_name        | company_name     | price |
 |------------|---------------------|------------------|-------|
 | #0001      | Подушка             | Idea             | 790   |
 | #0024      | Сковородка          | Tofal            | 1890  |
