@@ -284,4 +284,15 @@ print(df.head(10))
 <br>  
 
 ***Задание 3***  
+Выведите последние десять строчек датафрейма ```df```. Для вывода используйте функцию ```print()```.
+```
+import pandas as pd
+
+df = pd.read_csv('/datasets/orders_shop_items.csv')
+
+print(df.tail(10))
+```
+<br>  
+
+***Задание 4***  
 Вы
