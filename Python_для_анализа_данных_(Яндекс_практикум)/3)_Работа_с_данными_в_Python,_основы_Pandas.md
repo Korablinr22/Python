@@ -295,4 +295,26 @@ print(df.tail(10))
 <br>  
 
 ***Задание 4***  
-Вы
+Выведите случайную строку из датафрейма ```df```. Для вывода используйте функцию ```print()```.
+```
+import pandas as pd
+
+df = pd.read_csv('/datasets/orders_shop_items.csv')
+
+print(df.sample()) 
+```
+<br>  
+
+***Задание 5***  
+Выведите количество строк в датафрейме.  
+```
+import pandas as pd
+
+df = pd.read_csv('/datasets/orders_shop_items.csv')
+
+print(df.shape[0])
+```
+<br>  
+
+***Задание 6***  
+Выв
