@@ -273,5 +273,15 @@ print(df)
 <br>  
 
 ***Задание 2***  
-Выг
+Выведите первые десять строчек датафрейма ```df```. Для вывода используйте функцию ```print()```.
+```
+import pandas as pd
 
+df = pd.read_csv('/datasets/orders_shop_items.csv')
+
+print(df.head(10))
+```
+<br>  
+
+***Задание 3***  
+Вы
