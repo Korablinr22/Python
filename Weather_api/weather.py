@@ -5,7 +5,7 @@ import seaborn as sb
 import sqlalchemy as sql
 
 # создаем переменные для запроса
-api_key = 'cf4d1efcc9b3ee304ac0562d0359b27a'
+api_key = '***'
 city = 'Biysk'
 url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
 response = req.get(url)
