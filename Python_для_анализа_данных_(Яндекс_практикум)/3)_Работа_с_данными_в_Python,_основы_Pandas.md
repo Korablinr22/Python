@@ -463,7 +463,19 @@ print(result)
 Используйте логическую маску и оператор ```[]```, чтобы провести логическую индексацию датафрейма ```orders``` и выбрать все покупки, которые включали товары ```gadget``` и ```device``` с высокой стоимостью. Стоимость товара возьмите из столбца price.  
 Результат сохраните в датафрейме ```results``` и выведите первые пять строк этого датафрейма на экран.
 ```
+# Импорт библиотеки pandas и загрузка данных датасета orders_shop_rel.csv:
+import pandas as pd
+orders = pd.read_csv('/datasets/orders_shop_rel.csv').drop(columns='Unnamed: 0')
 
+# формирование масок для фильтрации фрейма по условию
+mask_for_gadget = (orders['category'] == 'gadget') & (orders['price'] > 100)
+mask_for_device = (orders['category'] == 'device') & (orders['price'] > 200)
+
+# определение нового дф через фильтрацию 
+results = orders[mask_for_gadget | mask_for_device]
+
+# вывод на экран результирующего набора из 5 строк
+print(results[:5])
 ```
 ## Фильтрация по строкам при помощи индексации
 <br>  
