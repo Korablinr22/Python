@@ -481,4 +481,27 @@ print(results[:5])
 <br>  
 
 ***Задание 1***  
-Нужно сос
+Сохраните данные ```orders_shop_items.csv``` в датафрейм ```items```. Проведите сортировку датафрейма ```items``` по общему количеству покупок ```(orders)``` в порядке убывания — то есть от большего к меньшему и создайте с помощью оператора ```.loc[]``` выборку, содержащую первые десять строк столбцов ```'category'```, ```'item_name'``` и ```'orders'```. Это будет список «Топ-10 самых популярных товаров».  
+Результат сохраните в переменной ```top_10_items``` и выведите его на экран.  
+```
+# Импортируем библиотеку pandas и загрузим данные датасета orders_shop_items.csv:
+import pandas as pd
+items = pd.read_csv('/datasets/orders_shop_items.csv')
+
+# Проведем сортировку датафрейма items по снижению значений 'orders':
+sorted_df = items.sort_values(by = 'orders', ascending = False)
+
+# Сбросим индекс датафрейма sorted_df:
+sorted_df = sorted_df.reset_index(drop=True)
+
+# Создадим срез данных, включающий первые 10 строк столбцов:
+# 'category','item_name' и 'orders':
+top_10_items = sorted_df.loc[:9, ['category', 'item_name', 'orders']]
+
+# Выведем результат на экран:
+print(top_10_items)
+```
+<br>  
+
+***Задание 2***  
+Сохран
