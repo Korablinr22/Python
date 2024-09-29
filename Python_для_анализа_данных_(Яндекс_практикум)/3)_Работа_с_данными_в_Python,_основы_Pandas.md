@@ -723,5 +723,35 @@ kpop = music_df[music_df['genre'] == 'kpop']
 # Подсчитаем количество строк и выведем их количество на экран:
 print(len(kpop))
 ```
+<br>  
+
 ***Задание 2***  
-Ес
+В названии столбцов обнаружились дополнительные неточности: один и тот же жанр указан по-разному. Например, ```hard'n'heavy``` и ```hard-n-heavy```, или ```türk``` и ```türkçe```. Замените названия этих жанров на ```hard_n_heavy``` и ```turkish```. Результат сохраните в исходном датафрейме.  
+В завершении подсчитаете количество строк, которые занимают композиции в этих жанров.  
+```
+# Импортируем библиотеку pandas и загрузим данные датасета music_log.csv:
+import pandas as pd
+music_df = pd.read_csv('/datasets/music_log.csv')
+
+# Проведём предварительную подготовку названия столбцов - трансформируем в нотацию snake_case:
+music_df.columns = music_df.columns.str.strip().str.replace(' ', '_').str.lower()
+
+# Создадим словарь с изменяемыми значениями:
+new_genres = {
+    "hard'n'heavy" : "hard_n_heavy",
+    "hard-n-heavy" : "hard_n_heavy",
+    "türk" : "turkish",
+    "türkçe" : "turkish"
+}
+
+# Проведём замену данных:
+music_df.replace(new_genres, inplace = True)
+
+# Подсчитаем количество строк и выведем их количество на экран:
+cnt = music_df[(music_df['genre'] == 'turkish') | (music_df['genre'] == 'hard_n_heavy')]
+print(len(cnt)) 
+```
+<br>  
+
+***Задание 3***  
+В
